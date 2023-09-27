@@ -30,3 +30,18 @@ figcaption {
     color: black;
     margin-top: 10px;
 }
+
+.musicdot-matriz {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.familia-tupfeln {
+    width: 275px;
+    float: right;
+}
+
+figure img {
+    width: 100%;
+}
