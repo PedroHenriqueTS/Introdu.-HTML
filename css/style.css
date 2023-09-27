@@ -7,13 +7,14 @@ body {
     margin-right: auto;
 }
 
-h1 {
+.titulo {
     padding: 10px;
     color: #3D3D3D;
     background-color: #E1EDF2;
+    font-size: 30px;
 }
 
-h2 {
+.subtitulo {
     border-bottom: 2px solid;
 }
 
