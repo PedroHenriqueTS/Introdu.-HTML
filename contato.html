@@ -13,7 +13,7 @@
 
     <h1 class="titulo">Entre em Contato</h1>
 
-    <form>
+    <form onsubmit="return validarFormulario()">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
@@ -28,5 +28,42 @@
 
         <button type="submit">Enviar</button>
     </form>
+
+    <script>
+        function validarFormulario() {
+          var nome = document.getElementById("nome").value;
+          var fone = document.getElementById("fone").value;
+          var email = document.getElementById("email").value;
+          var mensagem = document.getElementById("mensagem").value;
+    
+          if (nome.length < 10) {
+            alert("O campo Nome deve ter no mínimo 10 caracteres.");
+            return false;
+          }
+    
+          if (fone.length !== 10) {
+            alert("O campo de Telefone deve ter exatamente 10 caracteres.");
+            return false;
+          }
+    
+          if (!validarEmail(email)) {
+            alert("E-mail inválido.");
+            return false;
+          }
+    
+          if (mensagem.length < 10 || mensagem.length > 50) {
+            alert("O campo Mensagem deve ter entre 10 e 50 caracteres.");
+            return false;
+          }
+    
+          return true;
+        }
+    
+        function validarEmail(email) {
+          var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          return regex.test(email);
+        }
+      </script>
+
 </body>
 </html>
